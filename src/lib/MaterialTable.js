@@ -65,7 +65,7 @@ class MaterialTable extends React.Component {
 
   }
   componentDidMount(){
-    console.log(this.props.defaultColumns);
+    
     if(!this.props.preferences.columnsSelected && this.props.defaultColumns){
         this.setState({columnsSelected:this.props.defaultColumns})
       
@@ -80,7 +80,11 @@ class MaterialTable extends React.Component {
         return (
           <MaterialTableRow columnsSelected={_columns}
             {...row} key={row.id} rowIndex={_rowShift+index+1}
-            rowClickHandle={() => this.props.rowClickHandle(row.id)}
+            rowClickHandle={() => {
+              if(this.props.rowClickHandle){
+                this.props.rowClickHandle(row.id)
+              }
+              }}
             tools={(this.props.toolbar?<this.props.toolbar {...row} />:null)}
           />
         );
