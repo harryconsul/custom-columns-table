@@ -36,11 +36,12 @@ ReactDOM.render(
 ## Props
 List of props that you may use:
 
-Required props
+### Required props
+
 *`columnsArray` is the list of columns that the table may have each item has this picture `{value:"value",label:"label"}`.
 *`itemsList` is the array of the items to display in the body of the table , each item must have an `id` field and the others fields must be part of columnsArray value set.
 
-Optional props
+### Optional props
 *`defaultColumns` is an array of strings  that comes from 'columnsArray' value set.
 *`numberColumnLabel` is the title of the column that displays the row number.
 *`labelRowsPerPage`is the label to display in the paging footer beside de combo of rows per page.
