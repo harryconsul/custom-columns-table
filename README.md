@@ -28,8 +28,8 @@ const itemsList = [{id:"mx",country:"Mexico",language:"Spanish",continent:"Ameri
 //defaultColumns is an array of values that comes from 'columnsArray' list
 
 ReactDOM.render( 
-    <MaterialTable columnsArray={columnsArray}
-        itemsList ={itemList} defaultColumns={["country","language"]} numberColumnLabel={"#"} />
+    <CustomColumnsTable columnsArray={columnsArray}
+        itemsList ={itemsList} defaultColumns={["country","language"]} numberColumnLabel={"#"} />
     , document.getElementById('root'));
 ```
 
