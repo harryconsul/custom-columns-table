@@ -4,7 +4,7 @@ A ready and simple to use Table component based on Material-UI Library
 
 ## Install
 Run the following command:
-`npm install material-table`
+`npm install custom-columns-table`
 
 ## How to use
 
