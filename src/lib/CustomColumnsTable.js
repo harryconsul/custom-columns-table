@@ -12,10 +12,6 @@ import MaterialTablePaging from './MaterialTablePaging';
 import MaterialTableHeader from './MaterialTableHeader';
 import PropTypes from 'prop-types';
 
-
-
-
-
 class CustomColumnsTable extends React.Component {
   constructor() {
     super();
@@ -93,12 +89,7 @@ class CustomColumnsTable extends React.Component {
     return (
       <Paper style={{ padding: "10px" }}>
         <div >
-         { /*<MaterialTableColumnChooser columnsSelected={_columns}
-            closeHandle={this.closeColumnsEventHandler} openHandle={this.openColumnsEventHandler}
-            columnsAnchor={this.state.columnsAnchor} columnsHandle={this.columnsEventHandler}
-            columnsArray={this.props.columnsArray}
-            
-          />*/}
+        
           <Table >
             <MaterialTableHeader columnsSelected={_columns}
               columnsArray={this.props.columnsArray}
@@ -145,12 +136,12 @@ class CustomColumnsTable extends React.Component {
   }
 
 }
-MaterialTable.defaultProps={
+CustomColumnsTable.defaultProps={
   preferences:{},
   numberColumnLabel:"#",
   labelRowsPerPage:"Rows per Page",
 }
-MaterialTable.propTypes={
+CustomColumnsTable.propTypes={
   itemsList:PropTypes.array.isRequired,
   labelRowsPerPage: PropTypes.string.isRequired,
   defaultColumns: PropTypes.array,
