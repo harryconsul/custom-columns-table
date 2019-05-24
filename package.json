@@ -7,7 +7,7 @@
   "files": ["dist","README.md"],
   "repository": {
     "type":"git",
-    "url": "https://github.com/harryconsul/material-table"
+    "url": "https://github.com/harryconsul/custom-columns-table"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
