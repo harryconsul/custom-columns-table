@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
 
 
 
-class MaterialTable extends React.Component {
+class CustomColumnsTable extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -160,4 +160,4 @@ MaterialTable.propTypes={
   preferences:PropTypes.object,
   numberColumnLabel:PropTypes.string,
 }
-export default MaterialTable;
+export default CustomColumnsTable;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MaterialTable from './lib/MaterialTable';
+import CustomColumnsTable from './lib/CustomColumnsTable';
 const columnsArray = [{label:"Country",value:"country"},{label:"Language",value:"language"},
 {label:"Continent",value:"continent"},{label:"Capital",value:"capital"}
 ];
@@ -15,7 +15,7 @@ const itemList = [{id:"mx",country:"Mexico",language:"Spanish",continent:"Americ
 ]; 
  
 ReactDOM.render( 
-    <MaterialTable columnsArray={columnsArray}
+    <CustomColumnsTable columnsArray={columnsArray}
         itemsList ={itemList} defaultColumns={["country","language"]} numberColumnLabel={"#"} />
     , document.getElementById('root'));
 

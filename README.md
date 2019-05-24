@@ -1,4 +1,4 @@
-# Material Table
+# Custom Columns Table
 
 A ready and simple to use Table component based on Material-UI Library
 
@@ -11,7 +11,7 @@ Run the following command:
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MaterialTable from 'material-table';
+import {CustomColumnsTable} from 'custom-columns-table';
 
 const columnsArray = [{label:"Country",value:"country"},{label:"Language",value:"language"},
 {label:"Continent",value:"continent"},{label:"Capital",value:"capital"}

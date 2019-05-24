@@ -1,5 +1,5 @@
 {
-  "name": "material-table",
+  "name": "custom-columns-table",
   "version": "1.0.0",
   "author": "Mike Guzman",
   "main": "dist/index.js",
