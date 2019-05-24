@@ -1,6 +1,6 @@
 {
   "name": "custom-columns-table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Mike Guzman",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -8,8 +8,10 @@
     "dist",
     "README.md"
   ],
-  "keywords":[
-    "React Table Component","Custom Columns","Material Table"
+  "keywords": [
+    "React Table Component",
+    "Custom Columns",
+    "Material Table"
   ],
   "license": "MIT",
   "repository": {
