@@ -8,6 +8,10 @@
     "dist",
     "README.md"
   ],
+  "keywords":[
+    "React Table Component","Custom Columns","Material Table"
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/harryconsul/custom-columns-table"
