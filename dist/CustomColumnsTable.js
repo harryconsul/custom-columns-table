@@ -34,6 +34,10 @@ function (_React$Component) {
       newState.page = page;
 
       _this.setState(newState);
+
+      if (_this.props.changePageCallback) {
+        _this.props.changePageCallback(page);
+      }
     };
 
     _this.handleChangeRowsPerPage = function (event) {
@@ -42,6 +46,10 @@ function (_React$Component) {
       newState.rowsPerPage = event.target.value * 1;
 
       _this.setState(newState);
+
+      if (_this.props.changeRowsPerPageCallback) {
+        _this.props.changeRowsPerPageCallback(newState.rowsPerPage);
+      }
     };
 
     _this.columnsEventHandler = function (columnsSelected) {
@@ -119,9 +127,10 @@ function (_React$Component) {
       var emptyRows = this.state.rowsPerPage - Math.min(this.state.rowsPerPage, this.props.itemsList.length - this.state.page * this.state.rowsPerPage);
       return React.createElement(Paper, {
         style: {
-          padding: "10px"
+          padding: "10px",
+          overflowX: "hidden"
         }
-      }, React.createElement("div", null, React.createElement(Table, null, React.createElement(MaterialTableHeader, {
+      }, React.createElement(Table, null, React.createElement(MaterialTableHeader, {
         columnsSelected: _columns,
         columnsArray: this.props.columnsArray,
         numberColumnLabel: this.props.numberColumnLabel,
@@ -154,7 +163,7 @@ function (_React$Component) {
         onChangePage: this.handleChangePage,
         onChangeRowsPerPage: this.handleChangeRowsPerPage,
         ActionsComponent: MaterialTablePaging
-      }))))));
+      })))));
     }
   }]);
 

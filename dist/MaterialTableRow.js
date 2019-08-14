@@ -9,7 +9,12 @@ var MaterialTableRow = function MaterialTableRow(props) {
   return React.createElement(TableRow, {
     key: props.atencionId,
     hover: true
-  }, React.createElement(TableCell, null), React.createElement(TableCell, {
+  }, React.createElement(TableCell, {
+    padding: "checkbox",
+    style: {
+      width: "50px"
+    }
+  }), React.createElement(TableCell, {
     align: "left",
     onClick: props.rowClickHandle
   }, props.rowIndex), props.columnsSelected.map(function (item) {

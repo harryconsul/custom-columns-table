@@ -6,7 +6,7 @@ const  MaterialTableRow =props=>{
     
     return(
         <TableRow key={props.atencionId} hover={true}  >
-            <TableCell></TableCell>
+            <TableCell  padding="checkbox"  style={{width:"50px"}}></TableCell>
             <TableCell  align="left" onClick={props.rowClickHandle}>{props.rowIndex}</TableCell>
             {props.columnsSelected.map(item=> <TableCell key={item} align="left" 
             onClick={props.rowClickHandle} style={item==="paciente"?stylePaciente:null}>

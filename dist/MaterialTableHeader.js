@@ -8,8 +8,9 @@ var MaterialTableHeader = function MaterialTableHeader(props) {
   return React.createElement(TableHead, null, React.createElement(TableRow, {
     key: "header"
   }, React.createElement(TableCell, {
+    padding: "checkbox",
     style: {
-      width: "55px"
+      width: "50px"
     }
   }, React.createElement(MaterialTableColumnChooser, props), " "), React.createElement(TableCell, {
     align: "left"

@@ -26,6 +26,10 @@ class CustomColumnsTable extends React.Component {
     let newState = { ...this.state };
     newState.page = page;
     this.setState(newState)
+    if(this.props.changePageCallback){
+      this.props.changePageCallback(page);
+    }
+
   };
 
   handleChangeRowsPerPage = event => {
@@ -33,6 +37,9 @@ class CustomColumnsTable extends React.Component {
     newState.rowsPerPage = event.target.value * 1;
 
     this.setState(newState);
+    if(this.props.changeRowsPerPageCallback){
+      this.props.changeRowsPerPageCallback(newState.rowsPerPage);
+    }
   };
 
   columnsEventHandler = columnsSelected => {
@@ -87,9 +94,8 @@ class CustomColumnsTable extends React.Component {
       })
     const emptyRows = this.state.rowsPerPage - Math.min(this.state.rowsPerPage, this.props.itemsList.length - this.state.page * this.state.rowsPerPage);
     return (
-      <Paper style={{ padding: "10px" }}>
-        <div >
-        
+      <Paper style={{ padding: "10px",overflowX:"hidden" }}>
+               
           <Table >
             <MaterialTableHeader columnsSelected={_columns}
               columnsArray={this.props.columnsArray}
@@ -129,7 +135,7 @@ class CustomColumnsTable extends React.Component {
               </TableRow>
             </TableFooter>
           </Table>
-        </div>
+        
       </Paper>
 
     );

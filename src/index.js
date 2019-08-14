@@ -10,12 +10,21 @@ const itemList = [{id:"mx",country:"Mexico",language:"Spanish",continent:"Americ
 {id:"spa",country:"Spain",language:"Spanish",continent:"Europe",capital:"Madrid"},
 {id:"can",country:"Canada",language:"French,English",continent:"American",capital:"Ottawa"},
 {id:"uru",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
+{id:"uru1",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
+{id:"uru2",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
+{id:"uru3",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
+{id:"uru4",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
+{id:"uru5",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
+{id:"uru6",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
+{id:"uru7",country:"Uruguay",language:"Spanish",continent:"American",capital:"Montevideo"},
 
 
 ]; 
  
 ReactDOM.render( 
-    <CustomColumnsTable columnsArray={columnsArray}
+    <CustomColumnsTable columnsArray={columnsArray} 
+    changePageCallback={(page)=>window.alert("hey hey you are in page : " + page)}
+    changeRowsPerPageCallback={(rowsPerPage)=>window.alert("uhm ... you have : " + rowsPerPage + " rows per page")}
         itemsList ={itemList} defaultColumns={["country","language"]} numberColumnLabel={"#"} />
     , document.getElementById('root'));
 

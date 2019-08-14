@@ -7,7 +7,7 @@ const  MaterialTableHeader =props=>{
     return(
       <TableHead>
             <TableRow key="header">
-                <TableCell style={{width:"55px"}}><MaterialTableColumnChooser {...props} /> </TableCell>
+                <TableCell padding="checkbox" style={{width:"50px"}}><MaterialTableColumnChooser {...props} /> </TableCell>
                 <TableCell align="left">{props.numberColumnLabel}</TableCell>
                 {props.columnsSelected.map(item=>{ 
                     const _column = props.columnsArray.find(column=>column.value===item);
